@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, () => {
     basic.showNumber(input.compassHeading())
-    if (input.compassHeading() <= 90) {
+    if (input.compassHeading() <= 135) {
         basic.pause(100)
         images.createImage(`
             # # # # #
@@ -10,7 +10,7 @@ input.onButtonPressed(Button.A, () => {
             # # # # #
             `).showImage(0)
     } else {
-        if (input.compassHeading() <= 180) {
+        if (input.compassHeading() <= 225) {
             basic.pause(150)
             images.createImage(`
                 . # # # #
@@ -20,7 +20,7 @@ input.onButtonPressed(Button.A, () => {
                 # # # # .
                 `).showImage(0)
         } else {
-            if (input.compassHeading() <= 270) {
+            if (input.compassHeading() <= 315) {
                 basic.pause(150)
                 images.createImage(`
                     # . . . #
@@ -39,8 +39,20 @@ input.onButtonPressed(Button.A, () => {
                         # . . # #
                         # . . . #
                         `).showImage(0)
+                } else {
+                    if (input.compassHeading() <= 45) {
+                        basic.pause(150)
+                        images.createImage(`
+                            # . . . #
+                            # # . . #
+                            # . # . #
+                            # . . # #
+                            # . . . #
+                            `).showImage(0)
+                    }
                 }
             }
         }
     }
 })
+
